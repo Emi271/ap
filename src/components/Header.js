@@ -1,6 +1,7 @@
 import React from "react";
 import './style.css'
 import logo from '../img/logo.png'
+import CartWidget from "./CartWidget";
 function Header () {
     return (
         <nav class="navbar">
@@ -17,6 +18,7 @@ function Header () {
 <li><a href=""><i class="fa-regular fa-user"></i></a></li>
 </ul>
 </div>
+<CartWidget/>
 </nav>
     )
 };
