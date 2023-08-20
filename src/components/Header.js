@@ -2,22 +2,16 @@ import React from "react";
 import './style.css'
 import logo from '../img/logo.png'
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 function Header () {
     return (
         <nav class="navbar">
-    <div> <a href="../../index.html"><img src={logo} alt="logo" className="logo"/></a> </div>
+    <div><Link to="/"><img src={logo} alt="logo" className="logo"/></Link></div>
 <ul class="first-ul">
-<li><a href="">Ver todos los personajes</a></li>
-<li><a href="">Tienda</a></li>
-<li><a href="">Galería de imágenes</a></li>
+<li><Link>Ver todos los personajes</Link></li>
+<li><Link to="/productos">Tienda</Link></li>
+<li><Link>Galería de imágenes</Link></li>
 </ul>
-<div class="navbar-iconos">
-    <ul>
-<li> <a href=""><i class="fa-regular fa-star"></i></a></li>
-<li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
-<li><a href=""><i class="fa-regular fa-user"></i></a></li>
-</ul>
-</div>
 <CartWidget/>
 </nav>
     )

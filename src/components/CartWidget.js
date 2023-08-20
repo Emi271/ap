@@ -1,11 +1,12 @@
 import React from "react";
-import cart from '../img/cart.png'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './style.css'
 
 const CartWidget = () => {
 return (
     <div>
-        <img src={cart} alt="cart-widget" className="carrito"/>0
+<ShoppingCartIcon data-testid="ShoppingCartIcon" className="icon-carrito"/>
+
     </div>
 )
 }
