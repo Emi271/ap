@@ -5,6 +5,7 @@ import '../components/style.css'
 import data  from '../data/productos.json'
 import Header from "../components/Header";
 
+
 function MostrarProductos() {
     const [productos, setProductos] = useState([])
 
