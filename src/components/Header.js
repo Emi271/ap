@@ -5,10 +5,10 @@ import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
 function Header () {
     return (
-        <nav class="navbar">
+        <nav className="navbar">
     <div><Link to="/"><img src={logo} alt="logo" className="logo"/></Link></div>
-<ul class="first-ul">
-<li><Link>Ver todos los personajes</Link></li>
+<ul className="first-ul">
+<li><Link to="/personajes">Ver todos los personajes</Link></li>
 <li><Link to="/productos">Tienda</Link></li>
 <li><Link>Galería de imágenes</Link></li>
 </ul>
