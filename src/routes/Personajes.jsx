@@ -28,10 +28,11 @@ const PersonajesList = () => {
       <div className="row">
         {items.map((item) => (
           <div className="col-lg-4 col-md-6 col-sm-12 mb-4" key={item.id}>
-            <Card>
+            <Card style={{ width: '18rem' }} className="h-100">
               <Card.Img variant="top" src={item.imagen} alt={item.nombre} />
               <Card.Body>
                 <Card.Title>{item.nombre}</Card.Title>
+                <Card.Title>{item.Nombre}</Card.Title>
                 <Card.Text>{item.descripcion}</Card.Text>
               </Card.Body>
             </Card>
