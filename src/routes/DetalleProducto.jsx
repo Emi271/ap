@@ -1,24 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import { getFirestore, doc, query, getDocs, where } from 'firebase/firestore';
 import '../components/style.css';
-import { useAppContext } from '../components/Context';
+import { useParams } from 'react-router-dom';
 
-const DetalleProducto = ({id}) => {
+const DetalleProducto = () => {
 const [item, setItem] = useState({});
-const { setData } = useAppContext()
+const { id: itemId } = useParams
 
-    useEffect(() =>{
-        const db = getFirestore()
-        const itemRef = doc(db, 'items', id);
-
-        getDoc(itemRef).then((snapshot) => {
-            if (snapshot.exists()) {
-                setItem({ id: snapshot.id, ...snapshot.data() });
-                setData(doc);
-            }
-        })
-    }, [id , setData]);
-
+useEffect(() => {
+    const db = getFirestore();
+    const collection = doc(db, 'items');
+    const filteredCollection = query(collection, where('id', '==', itemId));
+  
+    getDocs(filteredCollection)
+      .then((querySnapshot) => {
+        const doc = querySnapshot.docs[0];
+        const data = doc.data();
+        const itemAdapted = { id: doc.id, ...data };
+        setItem(itemAdapted);
+      });
+  }, [itemId]);
+  
 
     return ( 
         <div>

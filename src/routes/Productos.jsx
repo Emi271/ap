@@ -31,8 +31,8 @@ const MostrarProductos = () => {
       <div className="row">
         {items.map((item) => (
           <div className="col-lg-4 col-md-6 col-sm-12 mb-4" key={item.id}>
-            <Card style={{ width: '18rem' }} className="h-100">
-              <Card.Img variant="top" src={item.imagen} alt={item.título} />
+            <Card style={{ width: '18rem' }} className="mx-0">
+              <Card.Img variant="top" src={item.imagen} alt={item.título} className='card-img' />
               <Card.Body>
                 <Card.Title>{item.título}</Card.Title>
                 <Card.Text>{item.precio}</Card.Text>

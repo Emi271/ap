@@ -16,6 +16,8 @@ nav  ul {
     background-image: url("../img/background-image.jpg");
     height: 100%;
     width: 100%;
+    background-repeat: repeat-y;
+    background-size: cover;
   }
   /*Página desc del producto */
   .detalle-prod {
@@ -106,4 +108,13 @@ nav  ul {
   width: 70px;
   background-color: aliceblue;
 }
-
+/*  .card-img{
+  position: relative;
+  display: flex;
+  height: 300px;
+}
+.mx-0 {
+  position: relative;
+  height: 500px;
+  display: flex;
+}  */
