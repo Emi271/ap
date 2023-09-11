@@ -1,21 +1,21 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useReducer, useState } from 'react';
+import { cartReducer } from './CartReducer'; // Asegúrate de importar tu reducer correctamente
 
-// Creamos el contexto
 const AppContext = createContext();
 
-// Hook personalizado para acceder al contexto
 export function useAppContext() {
   return useContext(AppContext);
 }
 
-// Componente principal que proporcionará el contexto
 export const AppProvider = ({ children }) => {
-  const [data, setData] = useState([]); // Puedes usar esta variable para almacenar datos
+  const initialState = {
+    cart: [],
+  };
 
-  // Puedes definir funciones para actualizar o realizar acciones relacionadas con este contexto
+  const [state, dispatch] = useReducer(cartReducer, initialState);
 
   return (
-    <AppContext.Provider value={{ data, setData }}>
+    <AppContext.Provider value={{ state, dispatch }}>
       {children}
     </AppContext.Provider>
   );

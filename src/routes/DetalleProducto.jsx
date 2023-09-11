@@ -1,34 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import { getFirestore, doc, query, getDocs, where } from 'firebase/firestore';
+import { getFirestore, doc,  getDoc } from 'firebase/firestore';
 import '../components/style.css';
 import { useParams } from 'react-router-dom';
 
 const DetalleProducto = () => {
 const [item, setItem] = useState({});
-const { id: itemId } = useParams
+const { id } = useParams()
+const { addToCart } = useAppContext()
 
 useEffect(() => {
     const db = getFirestore();
-    const collection = doc(db, 'items');
-    const filteredCollection = query(collection, where('id', '==', itemId));
-  
-    getDocs(filteredCollection)
+    const docReference = doc(db, 'items', id)
+    getDoc(docReference)
       .then((querySnapshot) => {
-        const doc = querySnapshot.docs[0];
-        const data = doc.data();
+        const data = querySnapshot.data();
         const itemAdapted = { id: doc.id, ...data };
         setItem(itemAdapted);
       });
-  }, [itemId]);
+  }, [id]);
   
+  const handleAddToCart = () => {
+    addToCart(item);
+  };
 
     return ( 
         <div>
            <p>{item.título}</p>
       <p>Price: {item.precio}</p>
-     <img alt='lala'>{item.imagen}</img>
+     <img alt={item.imagen} src={item.imagen} className='card-img'/>
+     <button onClick={addToCart}> Comprar </button>
         </div>
     )}
-    
 
-export default DetalleProducto;
+export default DetalleProducto
