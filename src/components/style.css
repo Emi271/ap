@@ -13,7 +13,7 @@ nav  ul {
 
   }
   .fondo {
-    background-image: url("../img/background-image.jpg");
+    background-color:#0167ec;
     height: 100%;
     width: 100%;
     background-repeat: repeat-y;
@@ -108,7 +108,7 @@ nav  ul {
   width: 70px;
   background-color: aliceblue;
 }
-/*  .card-img{
+ .card-img{
   position: relative;
   display: flex;
   height: 300px;
@@ -117,4 +117,9 @@ nav  ul {
   position: relative;
   height: 500px;
   display: flex;
-}  */
+}  
+.card-detalle-img {
+  position: relative;
+  display: flex;
+  height: 300px
+}

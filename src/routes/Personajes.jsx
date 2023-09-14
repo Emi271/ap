@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
-import { useAppContext } from '../components/Context';
 import { Card } from 'react-bootstrap';
 import '../components/style.css'
 import Header from '../components/Header';
 
 const PersonajesList = () => {
   const [items, setItems] = useState([]);
-  const { setData } = useAppContext()
 
   useEffect(() => {
     const db = getFirestore();
@@ -15,9 +13,8 @@ const PersonajesList = () => {
     getDocs(itemsCollection).then((snapshot) => {
       const docs = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
       setItems(docs);
-      setData(docs);
     });
-  }, [setData]);
+  }, []);
 
   return (
     <div className="fondo">

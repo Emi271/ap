@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
-import { useAppContext } from '../components/Context';
 import { Button, Card } from 'react-bootstrap';
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
@@ -8,7 +7,6 @@ import '../components/style.css'
 
 const MostrarProductos = () => {
   const [items, setItems] = useState([]);
-  const { setData } = useAppContext()
 
   useEffect(() => {
     const db = getFirestore();
@@ -18,9 +16,8 @@ const MostrarProductos = () => {
     getDocs(itemsCollection).then((snapshot) => {
       const docs = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
       setItems(docs);
-      setData(docs);
     });
-  }, [setData]);
+  }, []);
 
   return (
     <div className="fondo">

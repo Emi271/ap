@@ -4,20 +4,24 @@ import MostrarProductos from './routes/Productos';
 import PersonajesList from './routes/Personajes';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { AppProvider } from './components/Context';
+import ShoppingCart from './routes/ShoppingCart';
+import { CartProvider } from './context/CartContext';
+import Checkout from './routes/Checkout'; 
 
 function App()
 {
   return (
  <BrowserRouter>
- <AppProvider>
+ <CartProvider>
  <Routes>
   <Route exact path='/' element={<Home/>} />
   <Route exact path='/detalle/:id' element={<Detail/>} />
   <Route exact path='/productos' element={<MostrarProductos/>} />
   <Route exact path='/personajes' element={<PersonajesList/>} />
+  <Route exact path='/cart' element={<ShoppingCart/>} />
+  <Route exact path='/checkout' element={<Checkout/>}/> 
  </Routes>
- </AppProvider>
+ </CartProvider>
  </BrowserRouter>
       
   );
