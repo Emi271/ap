@@ -7,7 +7,7 @@ const Checkout = () => {
     const[user, setUser] = useState({})
     const [validateEmail, setValidateEmail] = useState('')
     const [orderId, setOrderId] = useState('')
-    const {cart, total, clear} = useContext(CartContext)
+    const {cart, total, clearCart} = useContext(CartContext)
 
     const datosComprador = (e) => {
         setUser({
@@ -24,13 +24,13 @@ const Checkout = () => {
                 user,
                 item:cart,
                 total:total(),
-                date:serverTimestamp
+                date:serverTimestamp()
             }
             const ventas = collection(db, 'orders')
             addDoc(ventas, order)
             .then((res)=> {
                 setOrderId(res.id)
-                clear()
+                clearCart()
             })
             
         }

@@ -13,8 +13,7 @@ nav  ul {
 
   }
   .fondo {
-    background-color:#0167ec;
-    height: 100%;
+    background-image: url(../img/background-image.jpg);
     width: 100%;
     background-repeat: repeat-y;
     background-size: cover;
@@ -114,12 +113,17 @@ nav  ul {
   height: 300px;
 }
 .mx-0 {
-  position: relative;
   height: 500px;
   display: flex;
 }  
 .card-detalle-img {
-  position: relative;
+
   display: flex;
   height: 300px
+}
+.row {
+  display: flex;
+  position: relative;
+  margin: 0%;
+  padding: 0%;
 }
