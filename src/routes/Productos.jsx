@@ -31,7 +31,7 @@ const MostrarProductos = () => {
     <div className="container">
       <div className="row">
       <div className="category-filter">
-                <label>Filtrar por Categoría:</label>
+                <label className='text-white'>Filtrar por Categoría:</label>
                 <select
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   value={selectedCategory}
