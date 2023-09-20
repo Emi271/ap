@@ -33,10 +33,10 @@ useEffect(() => {
       <Header/>
       <main className=" px-0 mx-0 justify-content-center">
         <div className='d-flex flex-column align-items-center'>
-           <p>{item.título}</p>
-      <p>Price: {item.precio}</p>
+           <p className='color-white'>{item.título}</p>
+      <p className='color-white'>Price: {item.precio}</p>
      <img alt={item.imagen} src={item.imagen} className='card-detalle-img'/>
-     { quantityAdded === '' ? <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
+     { quantityAdded === '' ? <ItemCount  initial={1} stock={item.stock} onAdd={onAdd}/>
      : <Link to='/cart' className='btn btn-dark'>Ir al carrito</Link>}
         </div>
         </main>

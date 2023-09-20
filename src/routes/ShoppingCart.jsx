@@ -15,7 +15,7 @@ const ShoppingCart = () => {
     <Header/>
     <main className=" px-0 mx-0 justify-content-center">
       {cart.length ? 
-      <div>
+      <div className='col-md-12 mb-12 col-12'>
         {cart.map((item) => <CartItem key={item.id} item={item}/> )}
         <p className='text-white'>Total a pagar: ${total()}</p>
         <div>

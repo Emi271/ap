@@ -39,6 +39,7 @@ const MostrarProductos = () => {
                   <option value="">Todas</option>
                   <option value="pocillos">Pocillos</option>
                   <option value="discos">Discos</option>
+                  <option value="otros">Otros</option>
                 </select>
               </div>
         {items.map((item) => (

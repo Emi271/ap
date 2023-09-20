@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 const CartWidget = () => {
     const{ cartQuantity } = useContext(CartContext)
 return (
-    <div className="d-flex justify-content-around align-items-center">
+    <div>
     <Link to="/cart"><ShoppingCartIcon data-testid="ShoppingCartIcon" className="icon-carrito"/></Link>
-{cartQuantity() > 0 && <Badge bg="danger">{cartQuantity}</Badge>}
+{cartQuantity() > 0 && <Badge bg="danger">{cartQuantity()}</Badge>}
     </div> )}
 
 export default CartWidget

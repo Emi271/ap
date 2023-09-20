@@ -18,7 +18,7 @@ const ItemCount = ({stock, onAdd, initial}) => {
         <div  className='d-flex felx-column align-items-center justify-content-between'>
             <div>
                 <Button variant='dark' onClick={restar}>-</Button>
-                <span className='btn'>{count}</span>
+                <span className='btn text-white'>{count}</span>
                 <Button variant='dark' onClick={sumar}>+</Button>
             </div>
             <Button className='mt-2'  variant='dark' disabled={count === 0} onClick={()=>onAdd(count)}>Comprar</Button>

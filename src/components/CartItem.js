@@ -6,7 +6,7 @@ const CartItem = ({item}) => {
   return (
     <div className='d-flex justify-content-around align-items-center'>
         <img src={item.imagen} alt={item.título} width={'150rem'}/>
-        <p className='text-white'>{item.titulo}</p>
+        <p className='text-white'>{item.título}</p>
         <p className='text-white'>{item.precio}</p>
         <p className='text-white'>Cantidad: {item.quantity}</p>
         <p className='text-white'>Sub total: ${item.quantity *item.precio}</p>
