@@ -14,7 +14,7 @@ function App()
  <BrowserRouter>
  <CartProvider>
  <Routes>
-  <Route exact path='/' element={<Home/>} />
+  <Route exact path='/high-school-dxd' element={<Home/>} />
   <Route exact path='/detalle/:id' element={<Detail/>} />
   <Route exact path='/productos' element={<MostrarProductos/>} />
   <Route exact path='/personajes' element={<PersonajesList/>} />
