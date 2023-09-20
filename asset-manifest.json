@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/high-school-dxd-app/static/css/main.ec185ad1.css",
+    "main.js": "/high-school-dxd-app/static/js/main.075224bd.js",
+    "static/js/787.6dbeba66.chunk.js": "/high-school-dxd-app/static/js/787.6dbeba66.chunk.js",
+    "static/media/background-image.jpg": "/high-school-dxd-app/static/media/background-image.49d4a4ae91a9783770f0.jpg",
+    "static/media/presentacion.webp": "/high-school-dxd-app/static/media/presentacion.734ca4c4d51d9f5b0e6c.webp",
+    "static/media/logo.png": "/high-school-dxd-app/static/media/logo.f7696db8c52dc02d03cf.png",
+    "index.html": "/high-school-dxd-app/index.html",
+    "main.ec185ad1.css.map": "/high-school-dxd-app/static/css/main.ec185ad1.css.map",
+    "main.075224bd.js.map": "/high-school-dxd-app/static/js/main.075224bd.js.map",
+    "787.6dbeba66.chunk.js.map": "/high-school-dxd-app/static/js/787.6dbeba66.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec185ad1.css",
+    "static/js/main.075224bd.js"
+  ]
+}
