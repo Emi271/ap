@@ -3,12 +3,13 @@ import { Badge } from "react-bootstrap";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './style.css'
 import { CartContext } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
     const{ cartQuantity } = useContext(CartContext)
 return (
     <div className="d-flex justify-content-around align-items-center">
-<ShoppingCartIcon data-testid="ShoppingCartIcon" className="icon-carrito"/>
+    <Link to="/cart"><ShoppingCartIcon data-testid="ShoppingCartIcon" className="icon-carrito"/></Link>
 {cartQuantity() > 0 && <Badge bg="danger">{cartQuantity}</Badge>}
     </div> )}
 

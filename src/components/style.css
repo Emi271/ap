@@ -112,18 +112,21 @@ nav  ul {
   display: flex;
   height: 300px;
 }
-.mx-0 {
+.card {
   height: 500px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }  
+.card-body {
+  text-align: center;
+}
 .card-detalle-img {
-
   display: flex;
   height: 300px
 }
 .row {
   display: flex;
-  position: relative;
   margin: 0%;
   padding: 0%;
 }
